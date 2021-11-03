@@ -39,6 +39,7 @@ SRC = ft_atoi.c \
 		ft_putstr_fd.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c \
+		ft_striteri.c \
 		ft_strtrim.c \
 		ft_split.c \
 		ft_strnstr.c \
@@ -74,8 +75,4 @@ fclean: clean
 bonus : $(OBJ) $(O_BONUS)
 	ar rcs $(NAME) $(OBJ) $(O_BONUS)
 	
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC) $(BNS)
-	gcc -nostartfiles -shared -o libft.so $(OBJ) $(O_BONUS)
-
 re : fclean all
